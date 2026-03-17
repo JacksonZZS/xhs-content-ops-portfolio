@@ -1,71 +1,68 @@
-# XHS Content Ops Studio Portfolio
+# XHS Content Ops Studio
 
-Portfolio project: an AI-assisted Xiaohongshu content operations studio built with Next.js, Playwright, Gemini, Supabase, and Python scraping workflows.
+> Portfolio project: an AI-assisted Xiaohongshu content operations studio built with Next.js, Playwright, Gemini, Supabase, and Python scraping workflows.
+
+## Overview
+
+This repository is the portfolio-facing presentation of a larger engineering project I built around Xiaohongshu content workflows.
+
+The goal was not just to build a dashboard. The goal was to turn a messy operator workflow into a coherent software system:
+
+- analyze competitor content
+- save reusable insight
+- feed that insight into AI content generation
+- publish through browser automation
+- monitor comments and private messages
+- turn engagement into leads and future content ideas
 
 ## What This Project Demonstrates
 
-This repository is a portfolio-focused presentation of a larger content operations system I built for Xiaohongshu workflows.
+- product thinking translated into concrete workflows
+- browser automation against real-world platform constraints
+- LLM-assisted generation, analysis, and reply suggestion
+- local scheduling and fallback-oriented system design
+- multi-workspace handling for multiple accounts or content directions
+- hybrid engineering across TypeScript web apps and Python scraping logic
 
-It demonstrates how I approach:
+## Key Workflows
 
-- productizing messy operator workflows into usable software
-- browser automation with Playwright against real-world platform constraints
-- AI-assisted content generation and structured analysis with Gemini
-- local scheduling, lead capture, and multi-workspace state handling
-- combining TypeScript web apps and Python scraping logic in one system
-
-## Core Flows
-
-### 1. Competitor Analysis
+### Competitor Analysis
 
 - search competitor notes
 - fetch note details and comments
 - generate structured analysis for hooks, persona, visual direction, and comment strategy
-- save useful findings into a local inspiration memory
+- save useful findings into an inspiration memory
 
-### 2. AI Content Creation
+### AI Content Creation
 
 - take a topic and workspace context
-- inject stored inspiration memory
+- inject saved inspiration into prompts
 - generate Xiaohongshu-ready titles, body copy, and tags
-- support image analysis to improve fit between visuals and copy
+- support image analysis to improve fit between visual assets and copy
 
-### 3. Engagement Operations
+### Engagement Operations
 
 - monitor comments from creator-facing flows
 - classify comment intent
 - convert comments into leads
 - auto-reply to high-intent comments
-- surface private-message and reply workflows
+- support private-message reading and reply workflows
 
-### 4. Publishing And Scheduling
+### Publishing And Scheduling
 
 - connect local logged-in accounts
-- launch publishing flows with Playwright
+- launch publish flows with Playwright
 - create scheduled posting tasks
 - run due tasks through a local execution route
 
-## Why I Built It
-
-Most “social media tools” stop at dashboards or mock APIs.
-
-I wanted to build something closer to real operational work:
-
-- scrape competitor signals
-- turn them into reusable insight
-- feed those insights into AI generation
-- publish and follow up using actual browser workflows
-
-That made the project a good testbed for product design, automation reliability, local operator tooling, and LLM integration.
-
 ## Engineering Highlights
 
-- Next.js App Router workbench with focused API routes
-- Google Gemini integration for generation, analysis, and reply suggestions
-- Playwright-based automation for publish, comment, and message flows
-- Python scraper fallback for flows where direct web APIs are fragile
-- local JSON fallback stores for demo mode when remote dependencies are unavailable
-- workspace-aware memory and topic backlog so multiple content directions stay separated
+- Next.js App Router workbench with route-based workflows
+- Google Gemini integration for copy generation, analysis, and reply suggestions
+- Playwright automation for publishing, comment replies, and message flows
+- Python scraper fallback where direct web API paths proved fragile
+- local JSON fallback stores for demo and degraded modes
+- workspace-aware memory and topic backlog to isolate multiple business lines
 
 ## Tech Stack
 
@@ -78,27 +75,40 @@ That made the project a good testbed for product design, automation reliability,
 - Google Gemini
 - pnpm / Turborepo
 
-## Repo Structure
+## Portfolio Review Guide
 
-```text
-portfolio/
-├── README.md
-├── PROJECT_SUMMARY.md
-├── RESUME_BULLETS.md
-└── CASE_STUDY.md
-```
+If you are reviewing this project during hiring, the fastest path is:
 
-## Best Way To Review This Project
+1. read [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)
+2. scan [CASE_STUDY.md](./CASE_STUDY.md)
+3. read [CODE_TOUR.md](./CODE_TOUR.md)
+4. scan [RESUME_BULLETS.md](./RESUME_BULLETS.md)
+5. open the main implementation repository
 
-If you are reviewing this as a hiring manager or interviewer, the best order is:
+## Main Implementation Repository
 
-1. read `PROJECT_SUMMARY.md`
-2. scan `CASE_STUDY.md`
-3. read `RESUME_BULLETS.md`
-4. then open the main source repository
+Full source code:
 
-## Main Source Repository
+- [hk-lifestyle-matrix](https://github.com/JacksonZZS/hk-lifestyle-matrix)
 
-The full implementation lives in the main codebase this portfolio repo was derived from.
+This portfolio repository exists to make the project easier to review without forcing people to start from a large monorepo.
 
-This portfolio version exists to make the project easier to review during hiring conversations.
+## Why I Built It
+
+Most social-media tooling either stays at the dashboard layer or relies on unstable private APIs without serious fallback handling.
+
+I wanted to build something closer to real operator work:
+
+- scrape signals
+- turn them into reusable operating insight
+- feed those insights into AI generation
+- publish and follow up through real browser workflows
+
+That made the project a strong testbed for product design, automation reliability, and practical LLM integration.
+
+## Additional Notes
+
+- [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md): concise project framing
+- [CASE_STUDY.md](./CASE_STUDY.md): deeper architecture and tradeoffs
+- [CODE_TOUR.md](./CODE_TOUR.md): where to look in the codebase
+- [RESUME_BULLETS.md](./RESUME_BULLETS.md): resume-ready phrasing
